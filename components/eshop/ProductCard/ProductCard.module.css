@@ -1,0 +1,13 @@
+.card {
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: wheat;
+
+    display: flex;
+    justify-content:space-between;
+}
+
+.image {
+    border-radius: 10px;
+}
