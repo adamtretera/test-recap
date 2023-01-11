@@ -1,4 +1,5 @@
 import {ProductList} from "../ProductList/ProductList";
+import {useState} from "react";
 
 const products = [
     { id: 1, name: 'Product 1', price: 100  , imageURL: 'https://picsum.photos/200/300' },
@@ -11,13 +12,24 @@ const products = [
 
 
 export const EshopPage = () => {
+    const [showComponent, setShowComponent] = useState(false);
+
+
+    function handleClick() {
+        setShowComponent(!showComponent);
+    }
+
 
     return (
         <main>
+
             <h1>
-                Eshop
+                List
             </h1>
-            <ProductList data={products}/>
-        </main>
+
+            <button onClick={handleClick}> Zde</button>
+            { showComponent ? <ProductList data={products}/>
+ : null}
+                </main>
     )
 }
